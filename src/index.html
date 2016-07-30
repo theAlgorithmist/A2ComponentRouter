@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>The Three Stooges in 'Reading, Routing, and Reduxing'</title>
+  <base href="/">
+
+  {{#unless environment.production}}
+  <script src="/ember-cli-live-reload.js" type="text/javascript"></script>
+  {{/unless}}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+
+  <style>
+    body 
+    { 
+      font-size : 15px;
+      font-family : Arial, Helvetica, Geneva, sans-serif; 
+      padding: 20px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <p>The Three Stooges star in 'Reading, Routing, and Reduxing' ... as if the boys knew anything about programming :)  This is version 1.0 of the demo in which
+      all services return hardcoded data.  But, that's for knuckleheads, so in version 2, all data will come from external sources (probably MongoDB).  Why Soitenly ... nyuk, nyuk, nyuk!</p>
+
+  <app-root>Loading...</app-root>  
+
+  {{#each scripts.polyfills}}
+    <script src="{{.}}"></script>
+  {{/each}}
+  <script>
+    System.import('system-config.js').then(function () {
+      System.import('main');
+    }).catch(console.error.bind(console));
+  </script>
+
+</body>
+
+</html>

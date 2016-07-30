@@ -1,0 +1,18 @@
+<!-- Three Stooges demo root component markup -->
+<div class="container-fluid rounded">
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <strong class="navbar-brand">The Three Stooges</strong>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="#" [routerLink]="['/script']">The Script</a></li>
+        <li><a href="#" [routerLink]="['/history']">Stooge History</a></li>
+        <li><a href="#" [routerLink]="['/bios']">Stooge Bios</a></li>
+        <li><a href="#" [routerLink]="['/episodes']">Partial Episode List</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <router-outlet></router-outlet>
+</div>
