@@ -68,39 +68,73 @@ Check out the router configuration in _app.routes.ts_
 
 ----
   // route configuration
+  
   const routes: RouterConfig = [
+  
     // map '/script' to the script component
+    
     {
+    
       path: 'script',
+      
       component: ScriptComponent
+      
     },
+    
     // map '/history' to the history component
+    
     {
+    
       path: 'history',
+      
       component: HistoryComponent
+      
     },
+    
     // map '/bios' to the bio component
+    
     {
+    
       path: 'bios',
+      
       component: BiosComponent
+      
     },
+    
     // map bios children to the StoogeBio component
+    
     {
+    
       path: 'bios/:id',
+      
       component: StoogeBioComponent
+      
     },
+    
     // map episodes to the Episodes component
+    
     {
+    
       path: 'episodes',
+      
       component: EpisodesComponent
+      
     },
+    
     // map '/' to '/script', default route
+    
     {
+    
       path: '',
+      
       redirectTo: '/script',
+      
       pathMatch: 'full'
+      
     },
+    
   ];
+  
 ----
 
 Notice that the default path is mapped to localhost:4200/script.
