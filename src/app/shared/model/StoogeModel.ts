@@ -136,6 +136,7 @@
        break;
 
        case BasicActions.GET_BIOS:
+         // tbd - this can be made more efficient (avoid redundant fetches) - left as an exercise - I will do it in part 2 of the demo
          this._store['bios'  ] = this._bioService.getData();
          this._store['action'] = BasicActions.GET_BIOS;
      
