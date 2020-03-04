@@ -1,6 +1,6 @@
 # Angular 2 (RC4) Redux and Component Router Demo
 
-This demo illustrates usage of the new (RC4) Component Router in a hypothetical application that uses a manually-coded, Redux-style model.  The architecture is Flux-style in that the only interactions allowed by Compoenents with the outside world are action dispatch and (Reactive) subscription to model updates.  The model is implemented by hand to illustrate some of the concepts associated with Redux.  There is no formal dispatcher in the application and there are no formal reducers.  Immutability and state reduction are handled inside the model.  This allows considerable flexibility to experiment with model internals.
+This demo illustrates usage of the new (RC4) Component Router in a hypothetical application that uses a manually-coded, Redux-style model.  The architecture is Flux-style in that the only interactions allowed by Components with the outside world are action dispatch and (Reactive) subscription to model updates.  The model is implemented by hand to illustrate some of the concepts associated with Redux.  There is no formal dispatcher in the application and there are no formal reducers.  Immutability and state reduction are handled inside the model.  This allows considerable flexibility to experiment with model internals.
 
 A notable feature of this approach is the request of data by various components.  A more traditional MVVM architecture would provide services to fetch data and then have Components declare required services as dependencies.  Services then need to be mocked during early testing.  With a Flux-style architecture, Components dispatch an action requesting data.  A model subscriber acts upon the data returned by the Observable.  While a service may be involved, most Components have only one dependency - the global store.  Only the global store need be mocked during testing, which makes the testing process easier from the beginning.
 
@@ -165,5 +165,5 @@ Apache 2.0
 
 [//]: # (kudos http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
-[The Algorithmist]: <http://algorithmist.net>
+[The Algorithmist]: <https://www.linkedin.com/in/jimarmstrong>
 
